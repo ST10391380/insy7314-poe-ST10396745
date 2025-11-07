@@ -1,0 +1,40 @@
+﻿{
+    "name":  "secure-payments-backend",
+    "version":  "1.0.0",
+    "private":  true,
+    "type":  "module",
+    "scripts":  {
+                    "dev":  "tsx watch src/server.ts",
+                    "build":  "tsc -p tsconfig.json",
+                    "start":  "node dist/server.js",
+                    "lint":  "echo \"add eslint if you want\"",
+                    "test:security":  "echo \"placeholder for newman or zap\""
+                },
+    "dependencies":  {
+                         "bcryptjs":  "^2.4.3",
+                         "compression":  "^1.7.4",
+                         "cookie-parser":  "^1.4.6",
+                         "cors":  "^2.8.5",
+                         "dotenv":  "^16.4.5",
+                         "express":  "^4.19.2",
+                         "express-rate-limit":  "^7.4.0",
+                         "express-slow-down":  "^2.0.3",
+                         "express-validator":  "^7.2.1",
+                         "helmet":  "^7.1.0",
+                         "http-status-codes":  "^2.3.0",
+                         "jsonwebtoken":  "^9.0.2",
+                         "mongoose":  "^8.6.0",
+                         "morgan":  "^1.10.0"
+                     },
+    "devDependencies":  {
+                            "@types/bcryptjs":  "^2.4.2",
+                            "@types/cookie-parser":  "^1.4.7",
+                            "@types/cors":  "^2.8.17",
+                            "@types/express":  "^4.17.21",
+                            "@types/jsonwebtoken":  "^9.0.6",
+                            "@types/morgan":  "^1.9.7",
+                            "@types/node":  "^24.5.2",
+                            "tsx":  "^4.20.6",
+                            "typescript":  "^5.5.4"
+                        }
+}
