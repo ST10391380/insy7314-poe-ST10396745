@@ -7,6 +7,7 @@ jobs:
   build-and-test:
     docker:
       - image: cimg/node:18.0
+      - image: cimg/openjdk:17.0
     steps:
       - checkout
       - run:
@@ -16,6 +17,14 @@ jobs:
           name: Run tests
           command: npm test
       - sonarcloud/scan
+      - run:
+          name: Build and analyze
+          command: |
+            mvn clean verify sonar:sonar \
+              -Dsonar.projectKey=st10391380 \
+              -Dsonar.organization=st10391380 \
+              -Dsonar.host.url=https://sonarcloud.io \
+              -Dsonar.login=$SONAR_TOKEN
 
 workflows:
   main:
